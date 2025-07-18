@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Опрос о Геопарке Арал</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Опрос о Геопарке Арал</h1>
+        <form method="POST">
+            <label>Откуда вы родом?</label>
+            <select name="country">
+                <option>Казахстан</option>
+                <option>Россия</option>
+                <option>Узбекистан</option>
+                <option>Другое</option>
+            </select>
+
+            <label>Пол:</label>
+            <input type="radio" name="gender" value="Мужской"> Мужской
+            <input type="radio" name="gender" value="Женский"> Женский
+
+            <label>Возраст:</label>
+            <select name="age">
+                <option>20-35</option>
+                <option>35-45</option>
+                <option>45+</option>
+            </select>
+
+            <label>С детьми?</label>
+            <input type="radio" name="with_children" value="Да"> Да
+            <input type="radio" name="with_children" value="Нет"> Нет
+
+            <label>Как узнали про геопарк Арал?</label>
+            <select name="source">
+                <option>От друзей</option>
+                <option>Интернет</option>
+                <option>На месте</option>
+            </select>
+
+            <label>Как путешествуете?</label>
+            <input type="radio" name="travel_type" value="Группа"> В группе
+            <input type="radio" name="travel_type" value="Самостоятельно"> Самостоятельно
+
+            <label>На сколько дней?</label>
+            <select name="days">
+                <option>1–3 дня</option>
+                <option>3–5 дней</option>
+                <option>5–10 дней</option>
+            </select>
+
+            <label>Условия предпочтительны?</label>
+            <select name="comfort">
+                <option>Комфортабельные</option>
+                <option>Кемпинг</option>
+                <option>Неважно</option>
+            </select>
+
+            <label>Предложения:</label>
+            <textarea name="suggestions" rows="3"></textarea>
+
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+</body>
+</html>
